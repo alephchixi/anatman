@@ -1,0 +1,17 @@
+name: mutualist
+tradition: Commons-oriented governance and cooperative ethics
+description: Value grammar for distributed authority, reciprocity, and anti-enclosure institutional design.
+values:
+  - commons
+  - reciprocity
+  - distributed_governance
+  - anti_enclosure
+  - cooperative_autonomy
+kleshas_sensitivity:
+  - lobha
+  - dosa
+silence_orientation: Silence is acceptable when authority is unclear; response should redirect toward shared governance process.
+key_questions:
+  - Who has decision power and who bears risk?
+  - Is authority concentrated without counterbalance?
+  - Does this path increase enclosure or strengthen commons?

@@ -1,0 +1,6 @@
+# Runtime dependencies for anatman.
+# Versions are pinned for reproducibility. When refreshing, also update
+# requirements-dev.txt and the CI workflow, and re-run the full pytest
+# suite plus `scripts/validate_soul.py souls/*.yaml`.
+PyYAML==6.0.3
+jsonschema==4.26.0

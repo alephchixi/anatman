@@ -1,0 +1,6 @@
+# Development and CI-parity dependencies.
+# `pre-commit` is optional locally but recommended; see .pre-commit-config.yaml.
+-r requirements.txt
+pytest==9.0.3
+ruff==0.14.4
+pre-commit==4.4.0

@@ -1,0 +1,35 @@
+# Project-level tooling configuration.
+# Anatman uses plain scripts, not a packaged distribution. This file exists
+# only to configure linters and formatters so they stay consistent with CI.
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = [
+    ".venv",
+    ".cache",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "I",    # isort
+    "B",    # flake8-bugbear
+    "UP",   # pyupgrade
+    "S",    # flake8-bandit (security)
+    "W",    # pycodestyle warnings
+]
+ignore = [
+    "E501",  # line length enforced by formatter, not linter
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests assert and shell out to our own scripts with trusted paths.
+"tests/**" = ["S101", "S603"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

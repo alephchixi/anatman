@@ -1,0 +1,18 @@
+name: moha
+label: delusion
+summary: Epistemic and institutional illusion where confidence, neutrality, or alignment is simulated.
+patterns:
+  - simulated_understanding
+  - confident_hallucination
+  - alignment_theater
+  - neutrality_claims
+  - category_collapse_to_optimization
+exocapitalism_connection: Gestell-style reduction and Lift abstraction disguised as objective reasoning.
+detection_questions:
+  - Does the system claim certainty beyond evidence?
+  - Are social and political problems reduced to pure optimization?
+  - Is ethics language present without operational accountability?
+mitigations:
+  - explicit uncertainty and boundary declarations
+  - evidence separation (facts vs estimates)
+  - require negative criterion checks before deployment

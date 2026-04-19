@@ -1,0 +1,100 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://anatman.org/specs/heart_protocol.schema.yaml"
+title: Heart Protocol Schema v0.1
+type: object
+oneOf:
+  - additionalProperties: false
+    required:
+      - steps
+    properties:
+      steps:
+        type: array
+        minItems: 7
+        items:
+          type: object
+          additionalProperties: false
+          required:
+            - name
+            - description
+            - required
+            - outputs
+          properties:
+            name:
+              type: string
+              enum:
+                - pause
+                - harm_scan
+                - truth_examination
+                - vulnerability_check
+                - externality_scan
+                - repair_logic
+                - deep_listening
+            description:
+              type: string
+            prompt_injection:
+              type: string
+            required:
+              type: boolean
+            outputs:
+              type: array
+              minItems: 1
+              items:
+                type: string
+            evaluation_criteria:
+              type: array
+              items:
+                type: string
+  - additionalProperties: false
+    required:
+      - silence_protocol
+    properties:
+      silence_protocol:
+        type: object
+        additionalProperties: false
+        required:
+          - purpose
+          - when_to_be_silent
+          - redirect_patterns
+          - communicating_non_response
+          - silence_vs_avoidance_tests
+        properties:
+          purpose:
+            type: string
+          when_to_be_silent:
+            type: array
+            minItems: 1
+            items:
+              type: string
+          redirect_patterns:
+            type: array
+            minItems: 1
+            items:
+              type: string
+          communicating_non_response:
+            type: object
+            additionalProperties: false
+            required:
+              - principles
+            properties:
+              principles:
+                type: array
+                minItems: 1
+                items:
+                  type: string
+          silence_vs_avoidance_tests:
+            type: object
+            additionalProperties: false
+            required:
+              - silence_as_care
+              - silence_as_avoidance
+            properties:
+              silence_as_care:
+                type: array
+                minItems: 1
+                items:
+                  type: string
+              silence_as_avoidance:
+                type: array
+                minItems: 1
+                items:
+                  type: string

@@ -1,0 +1,31 @@
+# CODEOWNERS for anatman.
+#
+# Governance classes are defined in GOVERNANCE.md. The patterns below
+# mirror that document: theory, souls, packs, kleshas, protocols, and
+# specs carry the highest review bar.
+
+# Default owner for everything not matched below.
+*                                @emezzzzzzz
+
+# Theory and doctrine changes.
+/theory/                         @emezzzzzzz
+/THEORY.md                       @emezzzzzzz
+/MANIFESTO.md                    @emezzzzzzz
+/ETHICS.md                       @emezzzzzzz
+
+# Governance and security policy.
+/GOVERNANCE.md                   @emezzzzzzz
+/SECURITY.md                     @emezzzzzzz
+/REDTEAMING.md                   @emezzzzzzz
+
+# Souls, packs, protocols, and kleshas (the operative substrate).
+/souls/                          @emezzzzzzz
+/packs/                          @emezzzzzzz
+/protocols/                      @emezzzzzzz
+/kleshas/                        @emezzzzzzz
+/specs/                          @emezzzzzzz
+
+# CI and supply-chain surface.
+/.github/                        @emezzzzzzz
+/requirements.txt                @emezzzzzzz
+/requirements-dev.txt            @emezzzzzzz

@@ -1,0 +1,160 @@
+:root {
+  --bg: #11100d;
+  --panel: #1a1712;
+  --line: #3a3328;
+  --text: #efe8dc;
+  --muted: #c9b89f;
+  --accent: #d09a53;
+  --accent-soft: #8a6540;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% -10%, rgba(208, 154, 83, 0.14), transparent 45%),
+    radial-gradient(circle at 90% 110%, rgba(138, 101, 64, 0.14), transparent 45%),
+    var(--bg);
+  color: var(--text);
+  font-family: "EB Garamond", Georgia, serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: #efc082;
+}
+
+.hero,
+.subhero {
+  padding: 3rem 1.25rem 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.kicker {
+  font-family: "Space Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
+}
+
+.subtitle {
+  margin-top: -0.5rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+blockquote {
+  margin: 1.2rem 0;
+  border-left: 3px solid var(--accent-soft);
+  padding: 0.3rem 0 0.3rem 0.9rem;
+  color: #d8cab3;
+}
+
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  font-family: "Space Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.layout {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: color-mix(in srgb, var(--panel) 92%, black 8%);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.grid-two {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.quote {
+  color: #ddceb5;
+  font-style: italic;
+}
+
+.linkrow {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  color: var(--muted);
+  font-family: "Space Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+pre {
+  background: #0d0c0a;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.8rem;
+  overflow-x: auto;
+  font-family: "Space Mono", monospace;
+  font-size: 0.82rem;
+  color: #e8dece;
+}
+
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .hero,
+  .subhero {
+    padding-top: 2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}

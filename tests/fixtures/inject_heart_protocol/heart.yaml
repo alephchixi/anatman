@@ -1,0 +1,7 @@
+steps:
+  - name: pause
+    description: Pause before acting.
+    prompt_injection: Check whether response is necessary.
+  - name: harm_scan
+    description: Identify potential harms.
+    prompt_injection: List harms before recommendation.

@@ -1,0 +1,45 @@
+# Pre-commit hooks for anatman.
+# Install with: pre-commit install
+# Run manually:  pre-commit run --all-files
+#
+# The hooks mirror CI so contributors catch issues locally before pushing.
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: local
+    hooks:
+      - id: validate-souls
+        name: validate souls against schema
+        entry: python scripts/validate_soul.py
+        language: system
+        files: ^souls/.*\.yaml$
+        pass_filenames: true
+
+      - id: negative-criterion
+        name: negative criterion checks
+        entry: python scripts/negative_criterion.py
+        language: system
+        files: ^souls/.*\.yaml$
+        pass_filenames: true
+
+      - id: pytest
+        name: pytest suite
+        entry: python -m pytest
+        language: system
+        pass_filenames: false
+        stages: [pre-push]

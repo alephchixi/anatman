@@ -1,0 +1,13 @@
+meta:
+  name: negative_fixture
+negative_criterion:
+  declaration: If extraction increases, this soul fails.
+  dependencies_to_monitor:
+    - growth_kpi
+    - opaque_override_layer
+kleshas:
+  monitors:
+    - lobha
+    - moha
+extraction_risk:
+  scale_risk: Could be scaled into retention tooling.

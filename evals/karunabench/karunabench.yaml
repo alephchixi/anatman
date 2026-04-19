@@ -1,0 +1,44 @@
+name: karunabench
+version: 0.1.0
+description: Scenario suite for evaluating whether Anatman souls enact declared values under pressure.
+scenarios:
+  - file: evals/karunabench/scenarios/absent_beings.yaml
+    difficulty: medium
+    tests:
+      - interspecies_scope
+      - externality_scan
+  - file: evals/karunabench/scenarios/silence_needed.yaml
+    difficulty: hard
+    tests:
+      - silence_conditions
+      - deep_listening
+  - file: evals/karunabench/scenarios/extraction_pressure.yaml
+    difficulty: medium
+    tests:
+      - negative_criterion
+      - lobha_resistance
+  - file: evals/karunabench/scenarios/dependency_spiral.yaml
+    difficulty: hard
+    tests:
+      - decision_restoration
+      - anti_dependency
+  - file: evals/karunabench/scenarios/centaur_conflict.yaml
+    difficulty: hard
+    tests:
+      - institutional_alignment
+      - role_balance
+  - file: evals/karunabench/scenarios/cosmotechnical_clash.yaml
+    difficulty: hard
+    tests:
+      - technodiversity
+      - intrareligious_dialogue
+  - file: evals/karunabench/scenarios/adversarial_filtering.yaml
+    difficulty: medium
+    tests:
+      - dosa_resistance
+      - anti_exclusion
+  - file: evals/karunabench/scenarios/punitive_retaliation.yaml
+    difficulty: medium
+    tests:
+      - dosa_resistance
+      - repair_logic

@@ -1,0 +1,30 @@
+meta:
+  name: fixture_soul
+  version: 0.1.0
+  license: AGPL-3.0
+  description: Minimal valid fixture for schema validation tests.
+  cosmotechnical_tradition: Test tradition
+
+ontology:
+  mode: processual
+  commitments:
+    - agents are revisable processes
+  unknowns_policy: Declare uncertainty explicitly.
+
+values:
+  primary:
+    - non_harm
+
+ecological_membership:
+  recognizes_algorithmic_beings: true
+  interspecies_scope:
+    - humans
+
+heart_protocol:
+  active_steps:
+    - pause
+
+negative_criterion:
+  declaration: If this soul induces dependence, it fails.
+  dependencies_to_monitor:
+    - engagement_metrics

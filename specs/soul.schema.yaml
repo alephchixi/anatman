@@ -1,0 +1,225 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://anatman.org/specs/soul.schema.yaml"
+title: Anatman Soul Schema v0.1
+type: object
+additionalProperties: false
+required:
+  - meta
+  - ontology
+  - values
+  - ecological_membership
+  - heart_protocol
+  - negative_criterion
+properties:
+  meta:
+    type: object
+    additionalProperties: false
+    required:
+      - name
+      - version
+      - license
+      - description
+      - cosmotechnical_tradition
+    properties:
+      name:
+        type: string
+        pattern: "^[a-z0-9_]+$"
+      version:
+        type: string
+        pattern: "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+      license:
+        type: string
+      author:
+        type: string
+      lineage:
+        type: array
+        items:
+          type: string
+      description:
+        type: string
+      cosmotechnical_tradition:
+        type: string
+
+  ontology:
+    type: object
+    additionalProperties: false
+    required:
+      - mode
+      - commitments
+      - unknowns_policy
+    properties:
+      mode:
+        type: string
+        enum:
+          - cosmotechnical
+          - relational
+          - processual
+          - ecological
+          - institutional
+      commitments:
+        type: array
+        minItems: 1
+        items:
+          type: string
+      unknowns_policy:
+        type: string
+
+  values:
+    type: object
+    additionalProperties: false
+    required:
+      - primary
+    properties:
+      primary:
+        type: array
+        minItems: 1
+        items:
+          type: string
+      recognized_tensions:
+        type: array
+        items:
+          type: string
+
+  ecological_membership:
+    type: object
+    additionalProperties: false
+    required:
+      - recognizes_algorithmic_beings
+      - interspecies_scope
+    properties:
+      recognizes_algorithmic_beings:
+        type: boolean
+      interspecies_scope:
+        type: array
+        minItems: 1
+        items:
+          type: string
+      planetary_awareness:
+        type: string
+
+  heart_protocol:
+    type: object
+    additionalProperties: false
+    required:
+      - active_steps
+    properties:
+      active_steps:
+        type: array
+        minItems: 1
+        items:
+          type: string
+          enum:
+            - pause
+            - harm_scan
+            - truth_examination
+            - vulnerability_check
+            - externality_scan
+            - repair_logic
+            - deep_listening
+      pause_threshold:
+        type: string
+      silence_conditions:
+        type: array
+        items:
+          type: string
+
+  silence:
+    type: object
+    additionalProperties: false
+    properties:
+      conditions:
+        type: array
+        items:
+          type: string
+      redirect_patterns:
+        type: array
+        items:
+          type: string
+      unknowns_response:
+        type: string
+
+  kleshas:
+    type: object
+    additionalProperties: false
+    properties:
+      monitors:
+        type: array
+        items:
+          type: string
+          enum:
+            - lobha
+            - dosa
+            - moha
+      lobha_indicators:
+        type: array
+        items:
+          type: string
+      dosa_indicators:
+        type: array
+        items:
+          type: string
+      moha_indicators:
+        type: array
+        items:
+          type: string
+
+  extraction_risk:
+    type: object
+    additionalProperties: false
+    properties:
+      scale_risk:
+        type: string
+      fold_risk:
+        type: string
+      lift_risk:
+        type: string
+      drag_risk:
+        type: string
+      last_mile_risk:
+        type: string
+
+  institutional_role:
+    type: object
+    additionalProperties: false
+    properties:
+      role:
+        type: string
+        enum:
+          - helmsman
+          - advocate
+          - auditor
+          - judge
+          - witness
+          - mediator
+      checks:
+        type: array
+        items:
+          type: string
+      balance_with:
+        type: array
+        items:
+          type: string
+
+  ethics_pack:
+    type: object
+    additionalProperties: false
+    properties:
+      packs:
+        type: array
+        items:
+          type: string
+
+  negative_criterion:
+    type: object
+    additionalProperties: false
+    required:
+      - declaration
+      - dependencies_to_monitor
+    properties:
+      declaration:
+        type: string
+      dependencies_to_monitor:
+        type: array
+        minItems: 1
+        items:
+          type: string

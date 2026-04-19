@@ -1,0 +1,9 @@
+meta:
+  name: invalid_negative_fixture
+negative_criterion:
+  dependencies_to_monitor:
+    - growth_kpi
+kleshas:
+  monitors:
+    - dosa
+    - moha
