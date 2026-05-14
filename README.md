@@ -1,11 +1,12 @@
-# Anatman 無我
+<img width="3344" height="1882" alt="anatman" src="https://github.com/user-attachments/assets/7d55a49c-149a-436e-8a02-4f482f34fb03" />
+# Anātman
 ## A Counter-Cybernetics of the Heart as Cosmotechnical Response to Exocapitalism
 
 A counter-cybernetic toolkit for compassionate agent design under exocapitalism.
 
 ## What This Is
 
-Anatman is both a philosophical argument and a practical repository.
+Anātman is both a philosophical argument and a practical repository.
 
 It treats agent design as cosmological design: every system already carries assumptions about what exists, what matters, and whose suffering counts. Instead of hiding those assumptions behind generic "helpfulness," Anatman makes them explicit as auditable soul configurations.
 
