@@ -1,4 +1,5 @@
 <img width="3344" height="1882" alt="anatman" src="https://github.com/user-attachments/assets/7d55a49c-149a-436e-8a02-4f482f34fb03" />
+
 # Anātman
 ## A Counter-Cybernetics of the Heart as Cosmotechnical Response to Exocapitalism
 
