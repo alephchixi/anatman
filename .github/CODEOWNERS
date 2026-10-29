@@ -5,30 +5,30 @@
 # specs carry the highest review bar.
 
 # Default owner for everything not matched below.
-*                                @emezzzzzzz
+*                                @emeisazam
 
 # Theory and doctrine changes.
-/theory/                         @emezzzzzzz
-/THEORY.md                       @emezzzzzzz
-/MANIFESTO.md                    @emezzzzzzz
-/ETHICS.md                       @emezzzzzzz
+/theory/                         @emeisazam
+/THEORY.md                       @emeisazam
+/MANIFESTO.md                    @emeisazam
+/ETHICS.md                       @emeisazam
 
 # Governance and security policy.
-/GOVERNANCE.md                   @emezzzzzzz
-/SECURITY.md                     @emezzzzzzz
-/REDTEAMING.md                   @emezzzzzzz
+/GOVERNANCE.md                   @emeisazam
+/SECURITY.md                     @emeisazam
+/REDTEAMING.md                   @emeisazam
 
 # Souls, packs, protocols, and kleshas (the operative substrate).
-/souls/                          @emezzzzzzz
-/packs/                          @emezzzzzzz
-/protocols/                      @emezzzzzzz
-/kleshas/                        @emezzzzzzz
-/specs/                          @emezzzzzzz
+/souls/                          @emeisazam
+/packs/                          @emeisazam
+/protocols/                      @emeisazam
+/kleshas/                        @emeisazam
+/specs/                          @emeisazam
 
 # CI and supply-chain surface.
-/.github/                        @emezzzzzzz
-/requirements.txt                @emezzzzzzz
-/requirements-dev.txt            @emezzzzzzz
+/.github/                        @emeisazam
+/requirements.txt                @emeisazam
+/requirements-dev.txt            @emeisazam
 
 # Inventory submission changes must remain owner-reviewed.
 /scripts/dependency_inventory.py @emeisazam
