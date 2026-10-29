@@ -29,3 +29,7 @@
 /.github/                        @emezzzzzzz
 /requirements.txt                @emezzzzzzz
 /requirements-dev.txt            @emezzzzzzz
+
+# Inventory submission changes must remain owner-reviewed.
+/scripts/dependency_inventory.py @emeisazam
+/tests/test_dependency_inventory.py @emeisazam
