@@ -3,4 +3,4 @@
 -r requirements.txt
 pytest==9.2.0
 ruff==0.17.4
-pre-commit==4.7.0
+pre-commit==4.7.0; python_version >= "3.11"
