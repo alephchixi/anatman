@@ -2,5 +2,5 @@
 # `pre-commit` is optional locally but recommended; see .pre-commit-config.yaml.
 -r requirements.txt
 pytest==9.2.0
-ruff==0.17.3
+ruff==0.17.4
 pre-commit==4.7.0
