@@ -38,7 +38,7 @@ This document tracks implementation status for `anatman_plan.md`.
 - [x] Dosa-only KarunaBench scenario (`punitive_retaliation.yaml`).
 - [x] Scaffold directories populated (`docs/audits/`, `integrations/claude_code/instances/`).
 - [x] `pyproject.toml` + `.pre-commit-config.yaml` + Ruff/pre-commit in `requirements-dev.txt`.
-- [x] `.github/CODEOWNERS` configured for `@emezzzzzzz`.
+- [x] `.github/CODEOWNERS` configured for `@emeisazam`.
 - [x] Skill helper scripts for `soul-lineage` and `exocapitalist-audit`.
 - [x] `pytest.ini` cache relocated to `.cache/pytest`; `.gitignore` updated.
 - [x] Full AGPL-3.0 license text restored in `LICENSE`; project notice added.
