@@ -57,3 +57,5 @@ The question, as Evans et al. conclude, *"is not whether intelligence will becom
 ---
 
 *This is where the theoretical project and the practical repository most directly converge. The soul specification is the technical actualization of this argument.*
+
+The *Science* article (391(6791), eaeg1895, 2026) proposes an account of plural intelligence. Anātman’s recognition of algorithmic beings is a design commitment. Whether an agent exercised restraint or preserved accountable decision-making has to be observed in a particular interaction. [The article](https://doi.org/10.1126/science.aeg1895)

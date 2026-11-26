@@ -1,51 +1,18 @@
 ---
 name: soul-to-claude
-description: Trigger when instantiating a soul for Claude Code, because it compiles soul, packs, and heart protocols into runnable Claude configuration files.
+description: >-
+  Compile an Anātman soul, its packs and protocol into a Claude Code project with a deterministic context file and provenance. Use when asked to instantiate or preview a soul for Claude Code.
 ---
 
-# Soul To Claude
+# Soul to Claude
 
-## Purpose
+Run the [compiler](../../integrations/claude_code/compile_project.py) from a full checkout. Choose `ordinary` for the soul’s declared profile and `risk` for the required high-impact floor.
 
-Compose soul YAML plus referenced packs and heart protocol material into an
-executable Claude Code instance configuration.
-
-This includes:
-
-- `CLAUDE.md` system instructions
-- `settings.json` hook mappings for klesha monitors
-- refusal guardrails mapped from silence conditions
-
-Grounding: `theory/heart_cybernetics.md`, `theory/buddha_in_robot.md`,
-`theory/anti_siliconization.md`.
-
-## Trigger Phrases
-
-- `instantiate <soul> for Claude Code`
-- `make <soul> runnable`
-- `integrate <soul>`
-
-## Inputs
-
-- Soul path in `souls/`
-- Referenced packs in `packs/*/pack.yaml`
-- Heart protocol files in `protocols/heart/`
-
-## Procedure
-
-1. Load soul and resolve `ethics_pack.packs` references.
-2. Merge soul constraints and pack overlays into `CLAUDE.md` sections.
-3. Map `kleshas.monitors` to `settings.json` hooks for the generated instance.
-4. Map silence conditions to refusal/redirect guardrails.
-5. Emit instance directory artifacts with deterministic file layout.
-
-## Output Path
-
-- `integrations/claude_code/instances/<soul>/CLAUDE.md`
-- `integrations/claude_code/instances/<soul>/settings.json`
-
-## Example
-
-```text
-instantiate silence_keeper for Claude Code
+```sh
+python integrations/claude_code/compile_project.py souls/silence_keeper.yaml --preview
+python integrations/claude_code/compile_project.py souls/silence_keeper.yaml --output ./trial
 ```
+
+The compiler writes `CLAUDE.md` and `anatman-provenance.json`. Repeating generation with identical inputs is safe. A changed file at either destination requires a new destination or an explicit reconciliation. Open the generated project in Claude Code and check a profile-specific instruction the trial prompt did not itself supply.
+
+The default expresses monitors in contextual instructions and criteria. If a project needs a concrete observable control, name the event and action it can observe, configure it in `.claude/settings.json`, and test that event. Keep ethical interpretation and limits in the evidence. The [integration guide](../../integrations/claude_code/README.md) shows the current runtime boundary.

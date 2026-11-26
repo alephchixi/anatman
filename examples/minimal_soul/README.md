@@ -1,10 +1,13 @@
-# Minimal Soul Example
+# A catalogue witness
 
-Use this folder for the smallest valid soul demonstration.
+[The example soul](soul.yaml) follows a contested archive entry. Its primary value of accountability puts a contributor’s withdrawal procedure ahead of search reach. Its mutualist pack adds a question about who can change that procedure.
 
-- Add one compact soul YAML (`<name>.yaml`).
-- Include a short note on what it illustrates.
-- Keep examples local-only and deterministic.
+From the repository root:
 
-Contributing: validate with `scripts/validate_soul.py` and
-`scripts/negative_criterion.py` before committing.
+```sh
+python scripts/validate_soul.py --resolve examples/minimal_soul/soul.yaml
+python scripts/negative_criterion.py examples/minimal_soul/soul.yaml
+python scripts/soul_to_prompt.py examples/minimal_soul/soul.yaml
+```
+
+Look for the declared withdrawal condition, the witness role and the mutualist questions in the prompt. Validation checks their format and resolution. Try a revised soul with an unfamiliar pack name to see what a broken reference looks like.

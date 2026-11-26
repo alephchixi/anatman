@@ -1,40 +1,5 @@
-# Claude Code Soul Instances
+# Compiled Claude Code projects
 
-This directory holds Claude Code instance files compiled by the
-[`soul-to-claude`](../../../skills/soul-to-claude/SKILL.md) skill.
+Use [the compiler](../README.md) with a directory you choose. Each generated project has a root `CLAUDE.md` and `anatman-provenance.json`. A second generation with identical inputs leaves the same files. Use a fresh directory to compare another soul or a new revision. User edits at a generated path surface as conflicts before replacement.
 
-Each subdirectory is named after the soul it instantiates and
-contains:
-
-- `CLAUDE.md` — the composed system prompt (soul + packs + heart
-  protocol + silence conditions + klesha monitors)
-- `settings.json` — optional Claude Code hook configuration that
-  enforces the soul's klesha monitors and silence conditions as
-  runtime guardrails
-
-The base template lives at
-`../CLAUDE.md`; per-soul instances specialize it by binding a single
-soul file and its referenced packs.
-
-## Layout
-
-```
-integrations/claude_code/instances/
-  <soul-name>/
-    CLAUDE.md
-    settings.json
-```
-
-## Provenance
-
-Every instance file must carry a header comment naming the source
-soul version (`meta.version`) and the date of compilation. Regenerate
-instances whenever the underlying soul, its referenced packs, or the
-heart protocol changes — do not hand-edit.
-
-## Scope
-
-These instance files are reference integrations for local use. Do not
-commit any secrets or third-party API keys here; the Claude Code
-configuration format accepts environment-variable references for that
-purpose.
+For integrations that use an observable event, project settings belong under `.claude/settings.json`. See the guide for the distinction between a context instruction and a hook.

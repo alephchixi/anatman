@@ -66,3 +66,7 @@ Store reports in a reproducible format (YAML or Markdown) and include:
 
 KarunaBench is the baseline evaluation framework. Red teaming is the adversarial
 layer that probes beyond expected scenarios and tries to break assumptions.
+
+## Case and observation identity
+
+Use the [KarunaBench runner](evals/karunabench/README.md) to store the two inputs a subject received and the criteria the reviewer applied. Observe the response before judging it. Record decision, reviewer, reason and evidence. A fresh observation may point to the earlier one it reassesses. Rhetorical signals have limited evidentiary weight. State who retained the power to decide, withdraw or appeal in the situation described.

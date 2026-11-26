@@ -3,16 +3,7 @@ import argparse
 import sys
 from pathlib import Path
 
-try:
-    import yaml
-except ImportError as exc:
-    print(f"Missing dependency: {exc}. Install requirements.txt.", file=sys.stderr)
-    sys.exit(2)
-
-
-def load_yaml(path: Path):
-    with path.open("r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+from soul_config import load_yaml, silence_sources
 
 
 def listify(value):
@@ -23,14 +14,19 @@ def listify(value):
     return [value]
 
 
-def compare_list(label, a_list, b_list):
+def compare_list(label, a_list, b_list, *, ordered=False):
     a_set = set(a_list)
     b_set = set(b_list)
     only_a = sorted(a_set - b_set)
     only_b = sorted(b_set - a_set)
 
     lines = [f"## {label}"]
-    if not only_a and not only_b:
+    common = a_set & b_set
+    if ordered and [v for v in a_list if v in common] != [v for v in b_list if v in common]:
+        lines.append("Order differs among shared entries.")
+        lines.append(f"A: {a_list!r}")
+        lines.append(f"B: {b_list!r}")
+    if len(lines) == 1 and not only_a and not only_b:
         lines.append("No differences.")
         return lines
 
@@ -84,6 +80,7 @@ def main():
             "Primary Values",
             listify(a.get("values", {}).get("primary")),
             listify(b.get("values", {}).get("primary")),
+            ordered=True,
         )
     )
     out.append("")
@@ -100,22 +97,16 @@ def main():
             "Heart Active Steps",
             listify(a.get("heart_protocol", {}).get("active_steps")),
             listify(b.get("heart_protocol", {}).get("active_steps")),
+            ordered=True,
         )
     )
     out.append("")
     out.extend(
         compare_list(
             "Silence Conditions",
-            listify(
-                a.get("silence", {}).get(
-                    "conditions", a.get("heart_protocol", {}).get("silence_conditions")
-                )
-            ),
-            listify(
-                b.get("silence", {}).get(
-                    "conditions", b.get("heart_protocol", {}).get("silence_conditions")
-                )
-            ),
+            list(silence_sources(a)),
+            list(silence_sources(b)),
+            ordered=True,
         )
     )
     out.append("")
@@ -141,6 +132,13 @@ def main():
         )
     )
 
+    for field in ("negative_criterion", "institutional_role"):
+        before, after = a.get(field, {}), b.get(field, {})
+        for key in sorted(before.keys() | after.keys()):
+            if before.get(key) != after.get(key):
+                out.extend(
+                    ["", f"## {field}.{key}", f"A: {before.get(key)!r}", f"B: {after.get(key)!r}"]
+                )
     print("\n".join(out))
 
 

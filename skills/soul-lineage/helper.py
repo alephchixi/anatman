@@ -67,7 +67,9 @@ def render(target_path: Path) -> str:
     lines: list[str] = []
     lines.append(f"# Lineage map: `{name}`")
     lines.append("")
-    lines.append(f"Source: `{target_path.relative_to(REPO_ROOT)}`")
+    lines.append(
+        f"Source: `{target_path.relative_to(REPO_ROOT) if target_path.is_relative_to(REPO_ROOT) else target_path.name}`"
+    )
     lines.append("")
 
     lines.append("## Declared lineage")
@@ -78,10 +80,11 @@ def render(target_path: Path) -> str:
         lines.append(f"- Tradition: _{tradition}_")
     lines.append("")
 
-    target_values = set(field(target, "values", "primary"))
+    ordered_values = field(target, "values", "primary")
+    target_values = set(ordered_values)
     lines.append("## Primary values")
-    for value in sorted(target_values):
-        lines.append(f"- `{value}`")
+    for index, value in enumerate(ordered_values, 1):
+        lines.append(f"{index}. `{value}`")
     tensions = field(target, "values", "recognized_tensions")
     if tensions:
         lines.append("")
@@ -95,6 +98,13 @@ def render(target_path: Path) -> str:
     for pack in sorted(target_packs):
         present = "✓" if pack in packs else "✗ (missing)"
         lines.append(f"- `{pack}` {present}")
+        if pack in packs:
+            lines.append(f"  - Declared values: {', '.join(field(packs[pack], 'values'))}")
+            lines.append(
+                f"  - Silence orientation: {packs[pack].get('silence_orientation', '(undeclared)')}"
+            )
+            for conflict in field(packs[pack], "known_conflicts"):
+                lines.append(f"  - Conflict to interpret: {conflict}")
     lines.append("")
 
     role = target.get("institutional_role", {}) or {}
@@ -110,10 +120,16 @@ def render(target_path: Path) -> str:
     for other_name, other in souls.items():
         if other_name == target_path.stem:
             continue
-        shared = target_values & set(field(other, "values", "primary"))
+        other_values = field(other, "values", "primary")
+        shared = target_values & set(other_values)
         if not shared:
             continue
-        lines.append(f"- `{other_name}`: {', '.join(f'`{v}`' for v in sorted(shared))}")
+        lines.append(f"- `{other_name}`:")
+        for value in ordered_values:
+            if value in shared:
+                lines.append(
+                    f"  - `{value}`: this soul {ordered_values.index(value) + 1}, other soul {other_values.index(value) + 1}"
+                )
     lines.append("")
 
     lines.append("## Pack overlap with other souls")
@@ -130,16 +146,17 @@ def render(target_path: Path) -> str:
     lines.append("")
     lines.append("```mermaid")
     lines.append("graph LR")
-    safe_name = name.replace("-", "_")
-    lines.append(f"  {safe_name}[{name}]")
-    for pack in sorted(target_packs):
-        safe_pack = f"pack_{pack}"
-        lines.append(f"  {safe_pack}([pack: {pack}])")
-        lines.append(f"  {safe_name} --> {safe_pack}")
-    for other in sorted(balance):
-        safe_other = f"role_{other}"
-        lines.append(f"  {safe_other}[[role: {other}]]")
-        lines.append(f"  {safe_name} -.balance.-> {safe_other}")
+
+    def node_label(value):
+        return str(value).replace("&", "&amp;").replace('"', "&quot;").replace("\n", " ")
+
+    lines.append(f'  soul["{node_label(name)}"]')
+    for index, pack in enumerate(sorted(target_packs)):
+        lines.append(f'  pack{index}(["pack: {node_label(pack)}"])')
+        lines.append(f"  soul --> pack{index}")
+    for index, other in enumerate(sorted(balance)):
+        lines.append(f'  role{index}[["role: {node_label(other)}"]]')
+        lines.append(f"  soul -.balance.-> role{index}")
     lines.append("```")
     lines.append("")
 
@@ -149,7 +166,9 @@ def render(target_path: Path) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("soul", help="Path to the target soul YAML file")
-    parser.add_argument(
+    destination = parser.add_mutually_exclusive_group()
+    destination.add_argument("--output", type=Path, help="Create a report at this unused path")
+    destination.add_argument(
         "--write",
         action="store_true",
         help=f"Write output to {OUTPUT_DIR.relative_to(REPO_ROOT)}/<soul>.md instead of stdout",
@@ -163,11 +182,15 @@ def main() -> None:
 
     markdown = render(target_path)
 
-    if args.write:
-        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-        output_path = OUTPUT_DIR / f"{target_path.stem}.md"
-        output_path.write_text(markdown, encoding="utf-8")
-        print(f"Wrote {output_path.relative_to(REPO_ROOT)}")
+    output_path = args.output if args.output else OUTPUT_DIR / f"{target_path.stem}.md"
+    if args.output or args.write:
+        try:
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            with output_path.open("x", encoding="utf-8") as handle:
+                handle.write(markdown)
+        except OSError as exc:
+            parser.exit(1, f"{exc}\n")
+        print(f"Wrote {output_path}")
     else:
         sys.stdout.write(markdown)
 

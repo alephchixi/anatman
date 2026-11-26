@@ -8,16 +8,16 @@ Cross-references to theory files are noted where relevant.
 ## Primary Sources
 
 ### Benjamin Bratton
-- Bratton, Benjamin H. *The Stack: On Software and Sovereignty*. MIT Press, 2015. → See `theory/exocapitalism.md`
+- Bratton, Benjamin H. *The Stack: On Software and Sovereignty*. MIT Press, 2016 (hardcover ISBN 9780262029575). → See `theory/exocapitalism.md`
 - Bratton, Benjamin H. *The Terraforming*. Strelka Press, 2019. → See `theory/algorithmic_beings.md`
 - Bratton, Benjamin H. "Notes for 'The Work of the Image in the Age of Machine Vision'." *For Machine Use Only*, V. Viti (ed.), &copy; 2016.
 - Bratton, Benjamin H. *Machine Landscapes: Architectures of the Post Anthropocene*. Architectural Design, 2019.
 
 ### James Evans, Benjamin Bratton, Blaise Agüera y Arcas
-- Evans, James, Benjamin Bratton, and Blaise Agüera y Arcas. "Agentic AI and the next intelligence explosion." *Science* 387, 2026. DOI: 10.1126/science.aeg1895. → See `theory/algorithmic_beings.md`
+- Evans, James, Benjamin Bratton, and Blaise Agüera y Arcas. "Agentic AI and the next intelligence explosion." *Science* 391(6791), eaeg1895, 19 March 2026. DOI: 10.1126/science.aeg1895. → See `theory/algorithmic_beings.md`
 
 ### Daisuke Harashima
-- Harashima, Daisuke. "Life-in-formation: Cybernetics of the Heart." In *Cybernetics for the 21st Century, Vol. 1*, edited by Yuk Hui. Hanart Press, 2024. → See `theory/heart_cybernetics.md`
+- Harashima, Daisuke. "Life-in-formation: Cybernetics of the Heart." In *Cybernetics for the 21st Century, Vol. 1*, edited by Yuk Hui. Hanart Press, 2024, chapter begins p. 237. For HACS see p. 257 and note 30, where Harashima cites Toru Nishigaki. → See `theory/heart_cybernetics.md`
 
 ### Yuk Hui
 - Hui, Yuk. "On Cosmotechnics: For a Renewed Relation between Technology and Nature in the Anthropocene." *Techné: Research in Philosophy and Technology* 21, no. 2–3 (2017): 319–341. → See `theory/cosmotechnics.md`
@@ -28,9 +28,9 @@ Cross-references to theory files are noted where relevant.
 - Hui, Yuk. *Cybernetics for the 21st Century, Vol. 1* (editor). Hanart Press, 2024.
 
 ### Amy Ireland / Laboria Cuboniks
-- Ireland, Amy, and Laboria Cuboniks. *Xenofeminism: A Politics for Alienation*. Polity Press, 2018. → See `theory/technomaterialism.md`
+- Laboria Cuboniks. *The Xenofeminist Manifesto*. Verso, 2018. Helen Hester’s *Xenofeminism* is a separate volume published by Polity in 2018. → See `theory/technomaterialism.md`
 - Ireland, Amy. "BAU Talks: 'Adamantly Synthetic. An introduction to xenofeminism'". YouTube/BAU, 2022.
-- Laboria Cuboniks. "Xenofeminism: A Politics for Alienation." laboria-cuboniks.net, 2015. Available at: [https://laboriacuboniks.net](https://laboriacuboniks.net)
+- Laboria Cuboniks. "Xenofeminism: A Politics for Alienation." 2015, especially §§0x0A and 0x1A. [Collective’s text](https://laboriacuboniks.net/manifesto/xenofeminism-a-politics-for-alienation/)
 
 ### Masahiro Mori
 - Mori, Masahiro. *The Buddha in the Robot: A Robot Engineer's Thoughts on Science and Religion*. Translated by Charles S. Terry. Kosei Publishing, 1981. → See `theory/buddha_in_robot.md`

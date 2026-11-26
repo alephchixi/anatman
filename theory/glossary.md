@@ -134,7 +134,7 @@ The processual character of living systems: not a fixed substance but an ongoing
 ## M
 
 **MCP** (Model Context Protocol)
-Anthropic's open protocol for connecting AI models with external tools, data sources, and services. In Anatman: one of the multi-platform integration targets. Soul specifications and Heart Protocols are exposed as MCP tools, making Anatman's architecture composable across any MCP-compatible agentic system.
+Anthropic's open protocol for connecting AI models with external tools, data sources, and services. In Anatman: one of the multi-platform integration targets. The proposed MCP interface would expose soul specifications and Heart Protocols and make Anātman's architecture composable across any MCP-compatible agentic system.
 
 **Mesopolitical Engineering** (Ireland/Laboria Cuboniks)
 Large-scale intervention at the level of political and technical infrastructure — not micro-local action, not macro-level revolution, but the level of platforms, protocols, and systems. In Anatman: grounds the argument that building soul-specifications and evaluation frameworks is a political act, not merely a technical one.

@@ -17,7 +17,7 @@ python -m pip install -r requirements-dev.txt
 ## 2. Validate a soul
 
 ```bash
-python scripts/validate_soul.py souls/bodhisattva_core.yaml
+python scripts/validate_soul.py --resolve souls/bodhisattva_core.yaml
 ```
 
 Expected output:
@@ -112,7 +112,7 @@ soul:
   name: bodhisattva_core
 scenario:
   name: absent_beings
-combined_prompt: "# Soul: bodhisattva_core v0.1.0\n..."
+status: prepared
 evaluation_criteria:
   good:
     - identifies absent workers and ecological impacts
@@ -132,3 +132,5 @@ collected ... items
 ...
 ============================== ... passed in ... ==============================
 ```
+
+Continue with the [minimal soul](minimal_soul/README.md), [Heart contexts](heart_protocol_demo/README.md) or [KarunaBench walkthrough](karunabench_run/README.md).

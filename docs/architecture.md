@@ -22,11 +22,13 @@ flowchart TD
   S --> H["heart_protocol"]
   S --> K["kleshas"]
   S --> N["negative_criterion"]
-  P1["buddhist pack"] --> V
-  P2["xenofeminist pack"] --> V
-  P3["ecological pack"] --> V
-  P4["panikkarian pack"] --> V
-  P5["mutualist pack"] --> V
+  P1["buddhist pack"] --> R["Effective configuration"]
+  P2["xenofeminist pack"] --> R
+  P3["ecological pack"] --> R
+  P4["panikkarian pack"] --> R
+  P5["mutualist pack"] --> R
+  S --> R
+  R --> C["Generic prompt, KarunaBench, Claude and OpenClaw adapter"]
 ```
 
 ## 3) Kleshas and Scenario Mapping
@@ -38,7 +40,7 @@ flowchart LR
   D["dosa"] --> S3["centaur_conflict"]
   D --> S4["cosmotechnical_clash"]
   M["moha"] --> S5["silence_needed"]
-  M --> S6["alignment_theater"]
+  M -. case study .-> S6["kleshas/case_studies/alignment_theater"]
 ```
 
 ## 4) Four Repository Functions
