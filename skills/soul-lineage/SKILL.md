@@ -1,58 +1,13 @@
 ---
 name: soul-lineage
-description: Trigger when lineage, conflicts, or ecosystem mapping is requested for a soul, because it makes cosmotechnical relations and tensions legible across souls and packs.
+description: >-
+  Map one Anātman soul’s declared lineage, ethics packs, ranked values and counterweights against the repository collection. Use when asked what souls share, where they differ, or who can check a role.
 ---
 
-# Soul Lineage
+# Soul lineage
 
-## Purpose
+From a full Anātman checkout, run `python skills/soul-lineage/helper.py souls/<name>.yaml`. Add `--output path.md` for a fresh destination. Use the Markdown as a starting point for the interpretation.
 
-Parse a soul's `meta.lineage`, `values.primary`, `ethics_pack.packs`, and
-`institutional_role.balance_with`, cross-reference with all other souls and
-packs, and render a Markdown lineage/tension graph.
+Read at least one shared pack’s questions and silence orientation. Show primary values in priority order and locate any shared value whose rank differs. Keep five relationships visible in the report: declared lineage, evidence of historical influence, shared pack, value priority and balancing role. A role can be declared even where no current soul fills it. Relate a tension to a case when the evidence permits it.
 
-Grounding: `theory/cosmotechnics.md`, `theory/algorithmic_beings.md`,
-`theory/exocapitalism.md`.
-
-## Trigger Phrases
-
-- `lineage of <soul>`
-- `what conflicts with <soul>`
-- `show soul ecosystem`
-
-## Inputs
-
-- Target soul path in `souls/`
-- All soul YAML files in `souls/`
-- All pack files at `packs/*/pack.yaml`
-- Optional `--write` flag
-
-## Procedure
-
-1. Read target soul and collect lineage/value/pack/role-balance fields.
-2. Compare against each other soul for shared values and declared tensions.
-3. Compare referenced packs for value overlap and divergence.
-4. Emit Markdown summary with optional Mermaid graph section.
-5. If `--write` is present, save the report to disk.
-
-## Helper
-
-A deterministic extractor lives at `skills/soul-lineage/helper.py`.
-Use it to produce the mechanical lineage map; add interpretation on
-top rather than re-deriving the extraction by hand.
-
-```bash
-python skills/soul-lineage/helper.py souls/<name>.yaml
-python skills/soul-lineage/helper.py souls/<name>.yaml --write
-```
-
-## Output Path
-
-- Default: stdout (Markdown)
-- Optional file mode: `docs/lineage/<soul>.md`
-
-## Example
-
-```text
-lineage of souls/cosmotechnical_guardian.yaml --write
-```
+The table should identify which direction an edge runs. Treat the graph as a map of declared relationships and use the text to explain a judgment it cannot show. Cite the book, declaration or pack field behind any claim of influence. See [a completed reading](../../examples/soul_walkthrough.md).

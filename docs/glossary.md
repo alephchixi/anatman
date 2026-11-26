@@ -102,3 +102,7 @@ Sadin's account of algorithmic doubles that increasingly mediate social and inst
 
 **siliconization**
 Expansion of platform logic into everyday life through quantification, prediction, and control.
+
+**Effective configuration.** The selected soul profile after Heart steps, both silence fields and pack references have been resolved. See [runtime configuration](../specs/anatman_spec.md#effective-runtime-configuration).
+
+**MCP.** A proposed Anātman interface. See the [integration status](../integrations/mcp/README.md).

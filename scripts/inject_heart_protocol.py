@@ -15,8 +15,10 @@ def load_yaml(path: Path):
         return yaml.safe_load(f)
 
 
-def build_preamble(heart_obj):
-    steps = heart_obj.get("steps", [])
+def build_preamble(heart_obj, *, required_only=False):
+    steps = [
+        step for step in heart_obj.get("steps", []) if not required_only or step.get("required")
+    ]
     lines = [
         "## Deliberative Preamble: Heart Protocol",
         "Before significant actions, traverse these steps in order:",
@@ -44,6 +46,11 @@ def main():
         default="protocols/heart/heart_protocol.yaml",
         help="Path to heart protocol YAML",
     )
+    parser.add_argument(
+        "--required-only",
+        action="store_true",
+        help="Use the global risk floor without an individual soul",
+    )
     parser.add_argument("--output", help="Optional output file")
     args = parser.parse_args()
 
@@ -53,7 +60,7 @@ def main():
         sys.exit(1)
 
     heart = load_yaml(heart_path)
-    preamble = build_preamble(heart)
+    preamble = build_preamble(heart, required_only=args.required_only)
 
     if args.prompt_file:
         base_prompt = Path(args.prompt_file).read_text(encoding="utf-8")

@@ -1,7 +1,7 @@
 # Exocapitalism and The Stack: The Diagnostic Framework
 
 > *Poliks, Marek, and Roberto Alonso Trillo. Exocapitalism: Economies with Absolutely No Limits. Becoming Press, 2025.*
-> *Bratton, Benjamin H. The Stack: On Software and Sovereignty. MIT Press, 2015.*
+> *Bratton, Benjamin H. The Stack: On Software and Sovereignty. MIT Press, 2016.*
 
 ---
 
@@ -9,7 +9,7 @@
 
 Exocapitalism names a radicalized form of capital that has emancipated itself from the traditional regimes of material production, human labor, and social consumption. "At the centre of Marek Poliks and Roberto Alonso Trillo's argument is the idea that capital does not belong to humans, it belongs to—and is governed by—itself" (Mudede, foreword). Exocapitalism is "a homecoming for a self-replicating machine of unknown origin whose internal drives not only contradict but remain utterly ambivalent to the interests of its former dependencies (sun, earth, oil, human). The human’s relationship to capitalism moves from generative to irrelevant. Capital sticks to itself" (Poliks & Trillo, 2025, p. 87-88).
 
-This autonomy is structured upon what Benjamin Bratton calls **The Stack**: an "accidental megastructure, one that we are building both deliberately and unwittingly and is in turn building us in its own image" (Bratton, 2015, p. 11). This planetary-scale computing system is not virtual; it is a "hungry machine" that "involves the whole Earth from which silica, steel, and all manner of conflict minerals are drawn" (Ibid., p. 12). 
+This autonomy is structured upon what Benjamin Bratton calls **The Stack**: an "accidental megastructure, one that we are building both deliberately and unwittingly and is in turn building us in its own image" (Bratton, 2016, p. 11). This planetary-scale computing system is not virtual; it is a "hungry machine" that "involves the whole Earth from which silica, steel, and all manner of conflict minerals are drawn" (Ibid., p. 12).
 
 ## The Five Movements
 
@@ -21,7 +21,7 @@ Poliks and Trillo track the motion of this machine through five conceptual movem
 | **Fold** | *"The dedifferentiated space of SaaS is prone to folds, to invisible but palpable concentrations of revenue as it flows recursively... generating new dimensions of relation (folds)"* (p. 42-44). | Algorithms that generate engagement from engagement; AI agents spawning sub-agents. |
 | **Lift** | *"...the tendency of capitalism to move itself away from fixed costs, from the soil, the earth, the sphere of human affairs... Lift is the transition from a hardware economy to a software economy"* (p. 57-60). | AI operates as a mechanism for extreme abstraction: *"capitalism lifts away from the production consumption... towards the modular assemblage licensing and then renewable capitalization of software."* |
 | **Drag** | *"Drag means both the attempts of humans to embed themselves within the lift process, and the attempts by humans to entrap capital by reconstructing their own social processes... Drag, counterintuitively, accelerates lift"* (p. 100). | Human-in-the-loop dependencies; prompting, RLHF, and AI alignment theater. |
-| **The Last Mile** | *"It names the final, most labor-intensive stretch of the delivery process, the point at which the algorithm meets the street, the body, the weather... Between bodies and data"* (p. 112). | The messy realities forced onto underpaid microworkers and data annotators—the *"last mile of bones and blood into the earth"* (p. 134-135). |
+| **The Last Mile** | *"It names the final, most labor-intensive stretch of the delivery process, the point at which the algorithm meets the street, the body, the weather... Between bodies and data"* (p. 112). | The messy realities forced onto underpaid microworkers and data annotators—the *"last mile of bones and blood into the earth"* (p. 132). |
 
 ### The Lift Movement and The Earth Layer
 
@@ -38,8 +38,10 @@ The exocapitalist diagnosis generates specific architectural requirements for An
 2. **The negative criterion** is the primary test: does this soul intensify capture or dependency?
 3. **Dependency monitoring** is non-optional.
 4. **Decision restoration** is an affirmative goal: returning decision-making capacity to the user.
-5. **The AGPL-3.0 license** provides legal immunity against Lift and Fold.
+5. The **AGPL-3.0-or-later** sets terms for distribution and, under §13, for offering corresponding source to users of a modified program over a network. Follow who has access to the code, who pays and who governs data to evaluate exposure to Lift and Fold in a particular project.
 
 ---
 
 *Next: see `anti_siliconization.md` for Sadin's complementary analysis of how this plays out in everyday digital life, and `cosmotechnics.md` for Hui's framework that grounds Anatman's cosmological-level response.*
+
+Poliks and Alonso Trillo locate the quoted discussion of cacao certification on p. 132 of *Exocapitalism* (Becoming Press, 2025). The material question for an AI integration is who performs and pays for verification, moderation or repair at delivery. Record a missing contractual term as unresolved. [Authorial introduction](https://becoming.press/1st-introductions-to-exocapitalism-%282025%29-by-marek-poliks-roberto-alonso-trillo)

@@ -1,18 +1,9 @@
-# Anatman + OpenClaw
+# OpenClaw adapter
 
-## Purpose
+The CLI produces Anātman system prompt text and metadata inside an integration JSON envelope.
 
-Convert Anatman souls into OpenClaw-compatible agent configuration JSON.
-
-## Usage
-
-```bash
-python integrations/openclaw/soul_adapter.py \
-  --soul souls/bodhisattva_core.yaml \
-  --output /tmp/openclaw_bodhisattva.json
+```sh
+python integrations/openclaw/soul_adapter.py --soul souls/silence_keeper.yaml --context risk
 ```
 
-## Notes
-
-- Output schema is intentionally minimal and adapter-friendly.
-- Extend keys to match your exact OpenClaw deployment contract.
+The JSON contains the same effective prompt as the generic renderer, and records the context and the origin of silence conditions. Map the dialogue into your installed OpenClaw workspace using the relevant runtime interface. Treat this output as adapter data until the installed workspace has loaded and demonstrated the intended behavior.

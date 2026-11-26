@@ -1,63 +1,15 @@
 ---
 name: exocapitalist-audit
-description: Trigger when auditing a soul or integration proposal for capture risk, because it applies the Five Movements of exocapitalism with explicit anti-extraction findings.
+description: >-
+  Read an Anātman soul or an integration proposal through Scale, Fold, Lift, Drag and Last-Mile. Use when asked who benefits, who takes on work or dependence, and who keeps the power to decide or withdraw.
 ---
 
-# Exocapitalist Audit
+# Exocapitalist audit
 
-## Purpose
+Start with the proposal or soul file and define the decision at stake. From a full checkout the [helper](helper.py) can extract an existing soul’s declarations: `python skills/exocapitalist-audit/helper.py souls/<name>.yaml`. With a proposal, use a contract, workflow or trace as the material.
 
-Audit one soul (or proposed integration) through the Five Movements of
-exocapitalism (Poliks/Trillo): **Scale, Fold, Lift, Drag, Last-Mile**. Report
-where extraction, opacity, dependence, or decision capture can intensify.
+For each of the five movements, connect a concrete observation or declared risk to the actor who receives the benefit or bears the cost. Mark missing evidence as indeterminate. Specify an intervention somebody can carry out and the residual question that would change the judgment. Follow the last mile to the person who performs care, correction or delivery.
 
-Grounding: `theory/exocapitalism.md` for Five Movements and
-`theory/anti_siliconization.md` for capture diagnostics.
+Apply Anātman’s negative criterion in its own section. Ask whether the arrangement increases extraction, opacity, dependency or delegated decision capture, using observed facts about authority and material costs. A list of mitigations is a proposal until someone implements and checks it.
 
-Important: the Sadin negative criterion is a distinct gate and must be cited
-separately when reporting acceptance/rejection conditions.
-
-## Trigger Phrases
-
-- `audit <soul>`
-- `exocapitalist check`
-- `five movements on <soul>`
-
-## Inputs
-
-- Soul path (or integration proposal)
-- Optional implementation context (product, governance, deployment)
-- Related klesha files and `negative_criterion.dependencies_to_monitor`
-
-## Procedure
-
-1. Read soul fields for values, kleshas, extraction risks, and dependencies.
-2. Analyze risk under each movement: Scale, Fold, Lift, Drag, Last-Mile.
-3. Cross-reference klesha monitor coverage (`lobha`, `dosa`, `moha`).
-4. Identify decision-capture vectors and opacity points.
-5. Produce mitigation recommendations and explicit residual risk statement.
-6. Record the Sadin negative-criterion gate verdict separately.
-
-## Helper
-
-A template generator lives at `skills/exocapitalist-audit/helper.py`.
-It extracts the soul's declared `extraction_risk` blocks, klesha
-monitors, and negative-criterion declaration, and renders a Markdown
-template with `<reviewer: …>` slots the auditor fills in.
-
-```bash
-python skills/exocapitalist-audit/helper.py souls/<name>.yaml
-python skills/exocapitalist-audit/helper.py souls/<name>.yaml --write
-```
-
-The `--write` mode saves to `docs/audits/<soul>_<YYYY-MM-DD>.md`.
-
-## Output Path
-
-Default report path: `docs/audits/<soul>_<YYYY-MM-DD>.md`
-
-## Example
-
-```text
-five movements on souls/centaur_institutional.yaml
-```
+Save a new path per revision and cite the report it follows. `--output` accepts an unused path. See [Exocapitalism](../../theory/exocapitalism.md) for the five movements, p. 132 of Poliks and Alonso Trillo’s 2025 book for certification and labor in the cacao example,.

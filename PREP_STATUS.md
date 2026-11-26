@@ -1,49 +1,14 @@
-# Execution Status
+# Implementation status
 
-This document tracks implementation status for `anatman_plan.md`.
+26 November 2026
 
-## Completed Work
+| Area | State |
+|---|---|
+| Soul YAML, five packs and two Heart protocol files | Schemas and reference checks. The repository admission command checks the declared negative criterion. |
+| Effective configuration | One resolver retains the provenance of silence and packs and applies the selected Heart context. It supplies the generic renderer, KarunaBench, Claude compiler and OpenClaw JSON adapter. |
+| KarunaBench | Case preparation, input-only export, recording and evidence review are local operations. The 48 soul/scenario pairs prepare in either context. |
+| Claude Code | The compiler generates a root context file and provenance. A scratch project loaded the generated profile in Claude Code 2.1.332 with Claude Haiku 5.5. Hooks depend on a concrete event and are configured separately when needed. |
+| OpenClaw | JSON output for integration work. A native OpenClaw runtime import is a separate qualification. |
+| MCP | [Proposed interface](integrations/mcp/README.md). |
 
-1. Repository initialized with git (`main` branch).
-2. Required directory scaffold confirmed present:
-   - specs, souls, heart protocols, packs, kleshas, evals, scripts, integrations, docs, examples, and site
-3. Cross-document consistency fixes applied:
-   - `silence_protocol` references aligned to YAML plan target.
-   - Foundations vocabulary aligned with planned schema naming.
-   - Glossary typo corrected.
-4. Missing referenced governance documents added:
-   - `GOVERNANCE.md`
-   - `REDTEAMING.md`
-5. License text normalized to clear AGPL-3.0-or-later declaration.
-6. Basic Python dependency file added (`requirements.txt`).
-7. Project hygiene baseline added (`.gitignore`).
-8. All files marked `[CREATE]` in `anatman_plan.md` have been implemented.
-9. Verification commands run successfully for schema validation, negative criterion checks, prompt rendering, soul diff, and KarunaBench runner generation.
-10. Release onboarding docs improved with explicit local Python environment setup.
-11. CI pipeline added at `.github/workflows/ci.yml` to run validation and smoke checks on push and pull requests.
-
-## Skills
-
-- [x] `soul-redteam` (`skills/soul-redteam/SKILL.md`)
-- [x] `soul-lineage` (`skills/soul-lineage/SKILL.md`)
-- [x] `pack-builder` (`skills/pack-builder/SKILL.md`)
-- [x] `exocapitalist-audit` (`skills/exocapitalist-audit/SKILL.md`)
-- [x] `soul-to-claude` (`skills/soul-to-claude/SKILL.md`)
-
-## Public Release Polish
-
-- [x] `SECURITY.md` disclosure channel filled in (GitHub Security Advisories, no personal email fallback).
-- [x] `theory/glossary.md` Pāli/Sanskrit klesha note added (dosa/dvesha).
-- [x] Personal filesystem path removed from `anatman_plan.md`.
-- [x] Dosa-only KarunaBench scenario (`punitive_retaliation.yaml`).
-- [x] Scaffold directories populated (`docs/audits/`, `integrations/claude_code/instances/`).
-- [x] `pyproject.toml` + `.pre-commit-config.yaml` + Ruff/pre-commit in `requirements-dev.txt`.
-- [x] `.github/CODEOWNERS` configured for `@emeisazam`.
-- [x] Skill helper scripts for `soul-lineage` and `exocapitalist-audit`.
-- [x] `pytest.ini` cache relocated to `.cache/pytest`; `.gitignore` updated.
-- [x] Full AGPL-3.0 license text restored in `LICENSE`; project notice added.
-
-## Next Action
-
-1. Enable branch protection on `main` requiring the `CI` workflow.
-2. Create the `v0.1.0` release tag.
+The [origin plan](anatman_plan.md) records the initial design. Follow the [quick start](examples/quick_start.md) for the current commands.

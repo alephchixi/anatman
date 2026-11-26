@@ -3,37 +3,18 @@ import argparse
 import sys
 from pathlib import Path
 
-try:
-    import yaml
-except ImportError as exc:
-    print(f"Missing dependency: {exc}. Install requirements.txt.", file=sys.stderr)
-    sys.exit(2)
-
-try:
-    from jsonschema import Draft202012Validator
-except ImportError as exc:
-    print(f"Missing dependency: {exc}. Install requirements.txt.", file=sys.stderr)
-    sys.exit(2)
+from soul_config import load_yaml, resolve, schema_errors
 
 
-def load_yaml(path: Path):
-    with path.open("r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
-
-
-def validate_file(path: Path, schema_obj):
+def validate_file(path: Path, schema_obj, *, resolve_references=False):
     try:
         soul = load_yaml(path)
-    except Exception as exc:
-        return [f"YAML parse error: {exc}"]
-
-    validator = Draft202012Validator(schema_obj)
-    errors = sorted(validator.iter_errors(soul), key=lambda e: list(e.path))
-    formatted = []
-    for err in errors:
-        where = ".".join([str(p) for p in err.path]) or "<root>"
-        formatted.append(f"{where}: {err.message}")
-    return formatted
+        errors = schema_errors(soul, schema_obj)
+        if resolve_references and not errors:
+            resolve(soul)
+        return errors
+    except (ValueError, OSError) as exc:
+        return [str(exc)]
 
 
 def main():
@@ -43,6 +24,9 @@ def main():
         "--schema",
         default="specs/soul.schema.yaml",
         help="Path to soul schema (default: specs/soul.schema.yaml)",
+    )
+    parser.add_argument(
+        "--resolve", action="store_true", help="Also validate pack and protocol references"
     )
     args = parser.parse_args()
 
@@ -61,7 +45,7 @@ def main():
             print(f"FAIL {p}: file not found")
             continue
 
-        errs = validate_file(p, schema)
+        errs = validate_file(p, schema, resolve_references=args.resolve)
         if errs:
             any_fail = True
             print(f"FAIL {p}")

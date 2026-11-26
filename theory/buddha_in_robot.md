@@ -48,3 +48,5 @@ Mori uses the Buddhist concept of *bonnō* (煩悩) — defilements or afflictio
 ---
 
 *Next: see `heart_cybernetics.md` for Harashima's affective-cybernetic development of these insights, and `technomaterialism.md` for Ireland.*
+
+Mori’s philosophical claim is presented in *The Buddha in the Robot*, translated by Charles S. Terry (Kōsei, 1981; fourth printing consulted, 1985). SN 22.59 concerns the aggregates and non-self. AN 3.69 concerns the roots of the unskillful. Anātman’s indicators of retention, retaliation and simulated certainty are separate, observable criteria.

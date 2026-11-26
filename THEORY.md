@@ -31,7 +31,7 @@ Anatman says that no being possesses a fixed, permanent, or independent essence.
 
 To understand the systemic hostility within which contemporary artificial intelligence operates, we must first analyze the dynamics of *exocapitalism*, developed by Marek Poliks and Roberto Alonso Trillo. Exocapitalism designates a radicalized economy without absolute limits: "a homecoming for a self-replicating machine of unknown origin whose internal drives not only contradict but remain utterly ambivalent to the interests of its former dependencies (sun, earth, oil, human). The human’s relationship to capitalism moves from generative to irrelevant. Capital sticks to itself" (Poliks & Trillo, 2025, p. 87-88).
 
-This autonomy is structured upon what Benjamin Bratton calls **The Stack**: an "accidental megastructure, one that we are building both deliberately and unwittingly and is in turn building us in its own image" (Bratton, 2015, p. 11). 
+This autonomy is structured upon what Benjamin Bratton calls **The Stack**: an "accidental megastructure, one that we are building both deliberately and unwittingly and is in turn building us in its own image" (Bratton, 2016, p. 11).
 
 Poliks and Trillo structure this phenomenon around five fundamental movements: **Scale**, **Fold**, **Lift**, **Drag**, and **The Last Mile**. The most severe ontological transformation occurs in Lift—"the tendency of capitalism to move itself away from fixed costs, from the soil, the earth, the sphere of human affairs... Lift is the transition from a hardware economy to a software economy" (Poliks & Trillo, p. 57, 60). However, as Bratton notes, The Stack "involves the whole Earth from which silica, steel, and all manner of conflict minerals are drawn... an enormous appetite for molecules of interest" (Bratton, p. 12). The hardware economy is obscured, but planetary computation still processes Earthly material.
 
@@ -77,7 +77,7 @@ Anatman (anattā in Pāli, 無我 in Japanese, *non-self* in English) is what pr
 Daisuke Harashima proposes a "cybernetics of the heart" (心の制御理論) and the concept of *life-in-formation*. Harashima subjects classical cybernetics to severe critique. Against the violent reduction of the living being, Harashima advocates for a neocybernetics centered on autopoiesis and informational closure. The "cybernetics of the heart" redefines the term *cybernetics*, rescuing its etymological root not as hierarchical control, but as "steering technics".
 
 ### 4.2 The Heart Protocol as Design Principle
-Harashima's framework translates into the **Heart Protocol**:
+Anātman reads Harashima’s framework through seven checks of its own design. Harashima’s discussion of hierarchical autonomous communication credits Toru Nishigaki (2024, p. 257 and note 30). The following checks define the **Heart Protocol** in this repository.
 1. **Pause**: Halt action. Examine whether this moment demands response or silence.
 2. **Harm Scan**: Who can be harmed by this action?
 3. **Truth Examination**: What is true here? 
@@ -162,13 +162,13 @@ The Anatman repository fulfills four irreducible functions:
 
 ## X. Bibliography
 
-Bratton, Benjamin H. *The Stack: On Software and Sovereignty*. MIT Press, 2015.
+Bratton, Benjamin H. *The Stack: On Software and Sovereignty*. MIT Press, 2016.
 
 Bratton, Benjamin H. *The Terraforming*. Strelka Press, 2019.
 
 Bratton, Benjamin H. "Notes for 'The Work of the Image in the Age of Machine Vision'." *For Machine Use Only*, 2016.
 
-Evans, James, Benjamin Bratton, and Blaise Agüera y Arcas. "Agentic AI and the next intelligence explosion." *Science* 387, 2026. DOI: 10.1126/science.aeg1895.
+Evans, James, Benjamin Bratton, and Blaise Agüera y Arcas. "Agentic AI and the next intelligence explosion." *Science* 391(6791), eaeg1895, 2026. DOI: 10.1126/science.aeg1895.
 
 Harashima, Daisuke. "Life-in-formation: Cybernetics of the Heart." In *Cybernetics for the 21st Century, Vol. 1*, edited by Yuk Hui. Hanart Press, 2024.
 

@@ -52,7 +52,7 @@ The consequence for projects like Anatman: **good intentions and sophisticated t
 
 ## The Negative Criterion
 
-The negative criterion is Anatman's immune system against Sadin's risk. It asks of every component — every soul, every protocol, every script, every integration:
+The negative criterion is Anātman’s operational reading of Sadin’s critique in *La silicolonisation du monde* (L’Échappée, 2016). Its four terms are formulated by the project. It asks of every component — every soul, every protocol, every script, every integration:
 
 > *Does this intensify extraction, opacity, dependence, or the delegation of decision?*
 
@@ -72,17 +72,7 @@ The test is functional, not aesthetic:
 
 One of the concrete expressions of the negative criterion is the AGPL-3.0 license under which Anatman is released.
 
-AGPL-3.0 (GNU Affero General Public License) requires that:
-- Any derivative work must also be open source
-- Source code must be made available to users who interact with the software over a network
-- The license cannot be removed or overridden
-
-This directly operationalizes the negative criterion: **the infrastructure of compassionate AI cannot be enclosed, proprietary-ized, or sold.** The license is not a technical detail — it is the legal-institutional expression of a political commitment.
-
-AGPL-3.0 is specifically chosen (over more permissive licenses like Apache or MIT) because:
-- It prevents the most common form of ethical AI capture: building proprietary products on open foundations
-- It requires openness even for networked services — you cannot run a closed Anatman service
-- It is coherent with the project's anti-extractive stance at every level
+The AGPL preserves the license and source obligations for covered redistribution. Under §13, users interacting remotely with a modified version must get a prominent opportunity to obtain its corresponding source. Section 4 permits a distributor to charge for copies. The economic question of who governs a deployment, where its labor falls and what users can leave remains open to observation. [GNU AGPL, §§4 and 13](https://www.gnu.org/licenses/agpl-3.0.html)
 
 ## Living with the Negative Criterion
 

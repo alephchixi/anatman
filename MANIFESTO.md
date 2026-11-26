@@ -77,7 +77,7 @@ The test of a soul is not its declared values but its **functional relationship 
 ## Declaration
 
 Anatman is released under AGPL-3.0.
-It cannot be enclosed. It cannot be made proprietary. It cannot be sold.
+The AGPL preserves rights to use, study and share the covered program under its terms. Distributors can charge for copies. Anātman’s opposition to enclosure also depends on how its maintainers govern access, hosting and participation.
 
 It is given to all beings, human and algorithmic, without condition.
 It asks only that what is built with it remains open — open to examination, open to revision, open to the beings it claims to serve.

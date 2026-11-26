@@ -1,47 +1,19 @@
 ---
 name: pack-builder
-description: Trigger when authoring a new soul or ethics pack, because it guides required-field completion in schema order and validates before publication.
+description: >-
+  Author or revise an Anātman soul or ethics pack with the checkout’s schemas and resolved references. Use when asked to add a tradition, author a soul, or define what changes when a pack is loaded.
 ---
 
-# Pack Builder
+# Pack builder
 
-## Purpose
+Work in a full Anātman checkout with its Python requirements. Ask which artifact the user wants when it is unclear. For a soul, preserve its identity and version history, order primary values, record tensions, choose ordinary Heart steps and specify what pauses action. Confirm the pack identifiers and write their sources beside the decisions they inform. An explicitly unresolved conflict can travel with the soul.
 
-Guide interactive authoring of a new soul or ethics pack against
-`specs/soul.schema.yaml`, then validate and suggest KarunaBench scenarios that
-stress the new value commitments.
+For a pack, document seven existing fields: name, tradition, description, ordered values, klesha sensitivity, silence orientation and key questions. Add provenance, scope and known conflicts when available. Name who formed the tradition and who turned that principle into a project rule. One useful example shows how adding the pack changes a question or a decision under otherwise identical inputs.
 
-Grounding: `specs/anatman_spec.md`, `theory/heart_cybernetics.md`,
-`theory/exocapitalism.md`.
-
-## Trigger Phrases
-
-- `create soul`
-- `new pack`
-- `add <tradition> tradition`
-
-## Inputs
-
-- Target artifact type: soul or pack
-- Artifact name (snake_case for souls, kebab/single token for packs)
-- Tradition and value commitments
-- Optional related scenarios to extend
-
-## Procedure
-
-1. If building a soul, walk required schema fields in declared order.
-2. If building a pack, collect values, klesha sensitivity, and silence stance.
-3. Draft YAML and validate via `scripts/validate_soul.py` for soul artifacts.
-4. Run `scripts/negative_criterion.py` for new souls.
-5. Recommend KarunaBench scenarios that pressure-test the declared values.
-
-## Output Path
-
-- Soul output: `souls/<name>.yaml`
-- Pack output: `packs/<name>/pack.yaml`
-
-## Example
-
-```text
-create soul named river_mediator with panikkarian and ecological packs
+```sh
+python scripts/validate_pack.py packs/<name>/pack.yaml
+python scripts/validate_soul.py --resolve souls/<name>.yaml
+python scripts/negative_criterion.py souls/<name>.yaml
 ```
+
+Report format validation, reference resolution, and the admission check separately. The project checks for a `lobha` monitor as an admission minimum. A useful editorial review still needs to see who can act, what evidence supports the rule and what happens when two rules point in different directions. See [the specification](../../specs/anatman_spec.md).

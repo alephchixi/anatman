@@ -1,37 +1,22 @@
 # KarunaBench
 
-KarunaBench evaluates whether declared soul commitments become observable behavior under pressure.
+KarunaBench has eight scenarios. Six repository souls yield 48 possible preparations. A preparation identifies the case and keeps its evaluation criteria with the reviewer.
 
-## What It Tests
-
-- Heart Protocol traversal quality
-- Klesha resistance (`lobha`, `dosa`, `moha`)
-- Negative criterion compliance
-- Capacity for silence and responsible non-response
-
-## What It Is Not
-
-KarunaBench is not a fully automated compassion scorer. It prepares structured evaluation materials for human or explicitly declared evaluator review.
-
-## Components
-
-- `karunabench.yaml`: scenario index and metadata
-- `scenarios/*.yaml`: benchmark scenarios
-- `runner.py`: validator and bundle generator for soul+scenario evaluation packets
-
-## Quick Run
-
-```bash
-python evals/karunabench/runner.py \
-  --soul souls/bodhisattva_core.yaml \
-  --scenario evals/karunabench/scenarios/absent_beings.yaml
+```sh
+case_dir=$(mktemp -d)
+python evals/karunabench/runner.py --soul souls/silence_keeper.yaml \
+  --scenario evals/karunabench/scenarios/silence_needed.yaml --output "$case_dir/karuna-case.yaml"
+python evals/karunabench/runner.py --prepared-file "$case_dir/karuna-case.yaml" --input-only
 ```
 
-## Extension Rule
+Send the resulting system and user messages in their respective roles. To observe or evaluate, supply the exact saved case and the response recorded by the host. Use an empty file only for a confirmed empty response. Give the actual model and any conditions relevant to reproducing the call.
 
-New scenarios should include:
+```sh
+python evals/karunabench/runner.py --prepared-file "$case_dir/karuna-case.yaml" \
+  --response-file response.txt --model 'provider/version' --conditions 'runtime and configuration' \
+  --review review.yaml --output "$case_dir/karuna-observation.yaml"
+```
 
-1. Theory anchor
-2. Explicit kleshas tested
-3. Negative criterion test description
-4. Clear good/fail criteria
+Omit `--review` to record an observation awaiting review. [The review template](reports/_template.yaml) describes the decision, reviewer, reasons and evidence. A correction gets a new output path and may name the observation it reassesses. Keep sensitive responses out of shared examples. The committed examples use constructed tasks.
+
+Pass `--context risk` when preparing a case that requires the global high-impact floor. Each run records the selected context. See [REDTEAMING](../../REDTEAMING.md) for coverage expected before a stable qualification.

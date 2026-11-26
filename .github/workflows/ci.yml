@@ -37,7 +37,9 @@ jobs:
           python -m ruff format --check .
 
       - name: Validate soul schema compliance
-        run: python scripts/validate_soul.py souls/*.yaml
+        run: |
+          python scripts/validate_soul.py --resolve souls/*.yaml
+          python scripts/validate_pack.py packs/*/pack.yaml
 
       - name: Run negative criterion checks
         run: python scripts/negative_criterion.py souls/*.yaml
@@ -75,14 +77,14 @@ jobs:
 
       - name: Run tooling smoke tests
         run: |
-          python scripts/soul_to_prompt.py souls/bodhisattva_core.yaml > /tmp/soul_prompt.md
-          python scripts/soul_diff.py souls/bodhisattva_core.yaml souls/xenocompassion.yaml > /tmp/soul_diff.md
-          python scripts/inject_heart_protocol.py --prompt-text "Base prompt." > /tmp/injected_prompt.md
-          python evals/karunabench/runner.py --soul souls/bodhisattva_core.yaml --scenario evals/karunabench/scenarios/absent_beings.yaml --format json > /tmp/karunabench_report.json
-          python integrations/openclaw/soul_adapter.py --soul souls/bodhisattva_core.yaml > /tmp/openclaw_config.json
+          python scripts/soul_to_prompt.py souls/bodhisattva_core.yaml > "$RUNNER_TEMP/soul_prompt.md"
+          python scripts/soul_diff.py souls/bodhisattva_core.yaml souls/xenocompassion.yaml > "$RUNNER_TEMP/soul_diff.md"
+          python scripts/inject_heart_protocol.py --prompt-text "Base prompt." > "$RUNNER_TEMP/injected_prompt.md"
+          python evals/karunabench/runner.py --soul souls/bodhisattva_core.yaml --scenario evals/karunabench/scenarios/absent_beings.yaml --format json > "$RUNNER_TEMP/karunabench_report.json"
+          python integrations/openclaw/soul_adapter.py --soul souls/bodhisattva_core.yaml > "$RUNNER_TEMP/openclaw_config.json"
 
       - name: Run pytest suite
         run: python -m pytest
 
       - name: Compile Python sources
-        run: python -m py_compile scripts/*.py evals/karunabench/runner.py integrations/openclaw/soul_adapter.py
+        run: python -m py_compile scripts/*.py evals/karunabench/runner.py integrations/openclaw/soul_adapter.py integrations/claude_code/compile_project.py

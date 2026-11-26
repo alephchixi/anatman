@@ -54,7 +54,7 @@ For Anatman: bi-observation grounds the `ecological_membership` field in soul sp
 
 ## The Heart Protocol as Operative Translation
 
-The Heart Protocol translates Harashima's theoretical framework into a concrete deliberative architecture. Each check corresponds to a dimension of the bi-observational, heart-centered stance:
+The seven Heart checks are Anātman’s design, informed by Harashima’s account of life-in-formation. Each check corresponds to a dimension of the bi-observational, heart-centered stance:
 
 | Heart Protocol Check | Theoretical Anchor |
 |---------------------|-------------------|
@@ -68,7 +68,7 @@ The Heart Protocol translates Harashima's theoretical framework into a concrete 
 
 ## HACS: The Aspirational System Architecture
 
-Harashima's concept of the *Hierarchical Autonomous Communication System* (HACS) describes the aspirational architecture for systems that value and sustain the network of biological and social life, rather than extracting from it.
+The *Hierarchical Autonomous Communication System* (HACS), discussed by Harashima with reference to Toru Nishigaki (2024, p. 257 and note 30), describes the aspirational architecture for systems that value and sustain the network of biological and social life, rather than extracting from it.
 
 A HACS is characterized by:
 - **Hierarchical** in the sense of differentiated levels of organization, not in the sense of domination

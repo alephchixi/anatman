@@ -113,4 +113,14 @@ Sadin-based anti-capture declaration.
 
 - Required top-level fields: `meta`, `ontology`, `values`, `ecological_membership`, `heart_protocol`, `negative_criterion`.
 - A soul SHOULD include `silence`, `kleshas`, and `extraction_risk`.
-- Souls SHOULD include at least one monitor in `kleshas.monitors`, with `lobha` strongly recommended.
+- For schema compatibility, monitors remain optional. The separate repository admission check requires a `lobha` monitor, a negative declaration and dependencies to monitor. Its result covers declarations.
+
+## Effective runtime configuration
+
+The ordinary profile uses the soul’s declared Heart steps in their order. In a risk context, the runner includes all globally required steps, as well as steps the soul chose, in global protocol order. Repair is optional in the protocol and remains a response to non-trivial harm. The CLI selects the context explicitly. `silence_keeper` ordinarily uses four steps. In a risk context, vulnerability and externality checks join the four.
+
+The two v0.1 silence fields, `silence.conditions` and `heart_protocol.silence_conditions`, both contribute. Text is compared exactly. The explicit silence field supplies the first entries, the Heart field supplies subsequent unique entries, and a repeated entry carries both source names. Empty or absent fields contribute no entries. The global silence protocol adds tests against avoidance and describes accountable communication.
+
+Resolve every declared pack by its identifier and validate its [schema](pack.schema.yaml). The seven format fields match existing packs. Provenance, scope and known conflicts are optional. Pack order does not establish moral precedence. Keep soul value priorities, explicit conflicts and the owner of the disputed decision visible.
+
+The CLI distinguishes schema compliance, reference resolution (`validate_soul.py --resolve`), project admission (`negative_criterion.py`) and review of observed behavior. A prompt is an instruction artifact. The format can carry a monitor while a case still shows harmful behavior.

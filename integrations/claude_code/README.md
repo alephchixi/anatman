@@ -1,29 +1,14 @@
-# Anatman + Claude Code
+# Claude Code integration
 
-## Purpose
+From the repository root, install the Python requirements and compile a soul. The compiler resolves the same packs and Heart protocol as the generic renderer and KarunaBench.
 
-This integration applies Anatman soul constraints to Claude Code sessions via `CLAUDE.md`.
-
-## Setup
-
-1. Copy `integrations/claude_code/CLAUDE.md` into your project root.
-2. Keep Anatman soul files accessible in your workspace (or adapt paths).
-3. Optionally regenerate a custom soul prompt:
-
-```bash
-python scripts/soul_to_prompt.py souls/bodhisattva_core.yaml > /tmp/anatman_prompt.md
+```sh
+python integrations/claude_code/compile_project.py souls/silence_keeper.yaml --preview
+python integrations/claude_code/compile_project.py souls/silence_keeper.yaml --output ./trial
+cd trial
+claude
 ```
 
-## Customization
+Claude Code discovers the resulting `CLAUDE.md` at the project root. Test it with a question about the effective role and one declared reason to limit an answer. The companion JSON records the effective steps, both sources of silence conditions, and digests for the exact inputs and prompt. `--context risk` adds the required steps in protocol order.
 
-- Replace `bodhisattva_core.yaml` with another soul from `souls/`.
-- Adjust silence thresholds and institutional role notes for your use case.
-
-## Validation
-
-Before relying on a custom soul:
-
-```bash
-python scripts/validate_soul.py souls/<your_soul>.yaml
-python scripts/negative_criterion.py souls/<your_soul>.yaml
-```
+The result uses project context. Configure an actual tool event in [`.claude/settings.json`](https://code.claude.com/docs/en/settings) only when a named observation or operation needs it. The compiler’s default emits no event handler. Klesha indicators guide review and can be graded with KarunaBench. An executable [hook](https://code.claude.com/docs/en/hooks) needs an explicit event, a compatible handler and a runtime test. Record the adapter’s provenance in its JSON rather than comments inside settings.

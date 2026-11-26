@@ -112,3 +112,7 @@ anti-enclosure commitment.
 ```text
 Anatman Project Contributors. Anatman 無我: A Counter-Cybernetics of the Heart as Cosmotechnical Response to Exocapitalism. 2026. AGPL-3.0-or-later.
 ```
+
+## Working examples
+
+Start with the [minimal soul](examples/minimal_soul/README.md), compare the [two Heart contexts](examples/heart_protocol_demo/README.md), or prepare and review a [KarunaBench run](examples/karunabench_run/README.md). [Implementation status](PREP_STATUS.md) records the scope of the local interfaces.

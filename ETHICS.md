@@ -90,3 +90,5 @@ See `REDTEAMING.md` for the protocol. Red teaming is required before any soul is
 *These principles are themselves subject to revision — through argument, through evidence, through the testimony of affected communities.*
 *But the bar for revision is: demonstrating that a change would better serve the reduction of suffering for a broader scope of beings.*
 *Not: demonstrating that a change would make the project more commercially viable, more palatable to funders, or easier to scale.*
+
+Anātman’s four-part negative criterion is its own operational reading of Sadin. Evaluate each matter against observed authority, dependencies and costs. The AGPL governs the software under its terms, including distributed copies and the source offer for a modified program used remotely under §13. Decisions about funding, labor, data and platform governance still require evidence.
